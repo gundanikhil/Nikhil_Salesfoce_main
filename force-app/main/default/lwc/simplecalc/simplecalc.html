@@ -1,0 +1,22 @@
+<template> 
+  <lightning-card title="Calculator" icon-name="custom:custom14">
+    <div class="slds-box slds-theme_shade"> 
+      <lightning-input label="Enter your Name" value={greeting} onchange={changeHandler}></lightning-input>
+      <p>Hello, {greeting}!</p>
+    </div>
+  </lightning-card> 
+    <div class="slds-box slds-theme_shade">  
+     <lightning-input type="number" name="input2" label="Number 1" onchange={handleNumberOneChange} value={firstNumber}></lightning-input>  
+     <lightning-input type="number" name="input2" label="Number 2" onchange={handleNumberTwoChange} value={secondNumber}></lightning-input>  
+   </div>
+   <div class="slds-box slds-theme_shade">  
+    <lightning-button label="+" onclick={addition}> </lightning-button>    
+    <lightning-button label="-" onclick={subtraction}> </lightning-button>
+    <lightning-button label="*" onclick={multification}> </lightning-button>  
+    <lightning-button label="/" onclick={division}> </lightning-button>  
+   </div>  
+   <div class="slds-box slds-theme_shade">
+    <p>Hey, {greeting} Your Output value is : </p>  
+      <P>{resultValue}</p> 
+   </div>    
+ </template>

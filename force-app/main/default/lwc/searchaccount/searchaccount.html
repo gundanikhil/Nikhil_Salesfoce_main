@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:account" size="small"></lightning-icon> Search Account           
+        </h3>
+<p class="slds-box slds-theme_shade">
+<lightning-input  type="search" class="slds-box slds-theme_shade" label="Search Account Name" onchange={handleKeyChange} value={accountName}></lightning-input>
+<lightning-button label="search" onclick={searc}> </lightning-button>         
+</p>
+
+<template for:each={accountList} for:item="accObj" for:index="index">
+    <option key={accObj.Id}>{accObj.Name}</option>
+  </template>
+     </lightning-card>
+</template>
